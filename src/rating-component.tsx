@@ -1,5 +1,5 @@
-import { FiStar } from 'react-icons/fi'
-import { useState } from 'react'
+import { FiStar } from 'react-icons/fi';
+import { useState } from 'react';
 
 const RatingData = [
   { label: 'Poor', color: '#E74C3C' },
@@ -7,19 +7,19 @@ const RatingData = [
   { label: 'Okay', color: '#F7DC6F' },
   { label: 'Good', color: '#76D7C4' },
   { label: 'Great', color: '#229954' },
-]
+];
 
 const RatingComponent = () => {
-  const [stars, setStars] = useState(0)
+  const [stars, setStars] = useState(0);
 
   const handleClick = (index) => {
-    setStars(index + 1)
-  }
+    setStars(index + 1);
+  };
 
   return (
     <div className="flex bg-white items-center justify-between  border border-black rounded-md min-w-[600px]  p-2">
       <div className="p-2 text-base font-semibold">
-        Intersteller <span className={'text-gray-400'}>(2014)</span>
+        Intersteller <span className="text-gray-400">(2014)</span>
       </div>
       <div className="flex gap-4 p-2">
         {Array.from({ length: 5 }).map((_, index) => (
@@ -46,7 +46,7 @@ const RatingComponent = () => {
         <p className="font-semibold text-gray-400">No ratings yet...</p>
       )}
     </div>
-  )
-}
+  );
+};
 
-export { RatingComponent }
+export { RatingComponent };
